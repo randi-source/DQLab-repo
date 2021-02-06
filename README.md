@@ -1,4 +1,4 @@
-#Learn with DQLab
+Learn with DQLab
 
 DQ Lab is a digital learning course to better understand data. Created and operate in Indonesia,
 this course has help lots people to start their journey into data. This course consist of 4 different
