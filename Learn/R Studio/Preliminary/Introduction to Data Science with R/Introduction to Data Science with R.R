@@ -1,19 +1,24 @@
-#"Hello World"
+#["Hello World"](https://academy.dqlab.id/main/livecode/111/211/1059)
 "Hello World"
 
-#Number & Calculation Practice
+#[Praktek Angka dan Perhitungan](https://academy.dqlab.id/main/livecode/111/211/1062)
 10+7
 
-#Variable in R
+#[Variable dalam R](https://academy.dqlab.id/main/livecode/111/211/1060)
 a=5
 
 print(a)
 
-#Comment in R
-10+7 #This is comment row
+#[Praktik Penggunaan Comment](https://academy.dqlab.id/main/livecode/111/212/1064)
+10+7 #Ini adalah baris komentar				
 
-#Vector in R
+#[Praktek Penggunaan Vector - Bagian Satu](https://academy.dqlab.id/main/livecode/111/212/1066)
+c(3, 10, 15)	
+
+#[Praktek Penggunaan Vector - Bagian Dua](https://academy.dqlab.id/main/livecode/111/212/1067)
 c(1:5)
 
-#Using Summary Function
+#[Menggunakan Fungsi Summary](https://academy.dqlab.id/main/livecode/111/212/1070)
 summary(c(1:5))
+
+
