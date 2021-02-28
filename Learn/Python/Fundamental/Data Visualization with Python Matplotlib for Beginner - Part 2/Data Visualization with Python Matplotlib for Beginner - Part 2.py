@@ -54,7 +54,7 @@ plt.gcf().set_size_inches(10, 5)
 plt.tight_layout()
 plt.show()
 
-#[Membuat Line Chart GMV Breakdown by Top Provinces]()
+#[Membuat Line Chart GMV Breakdown by Top Provinces](https://academy.dqlab.id/main/livecode/165/318/1487)
 # Buat variabel untuk 5 propinsi dengan GMV tertinggi
 top_provinces = (dataset.groupby('province')['gmv']
                         .sum()
@@ -81,7 +81,7 @@ plt.gcf().set_size_inches(12, 5)
 plt.tight_layout()
 plt.show()
 
-#[Membuat Anotas]()
+#[Membuat Anotas](https://academy.dqlab.id/main/livecode/165/318/1489)
 import matplotlib.pyplot as plt
 dataset.groupby(['order_month','province_top'])['gmv'].sum().unstack().plot(marker='.', cmap='plasma')
 plt.title('Monthly GMV Year 2019 - Breakdown by Province',loc='center',pad=30, fontsize=20, color='blue')
@@ -109,7 +109,7 @@ plt.tight_layout()
 plt.show()
 
 
-#[Membuat Subset Data]()
+#[Membuat Subset Data](https://academy.dqlab.id/main/livecode/165/319/1490)
 dataset_dki_q4=dataset[(dataset['province']=='DKI Jakarta') & (dataset['order_month'] >='2019-10')]
 print(dataset_dki_q4.head())
 
@@ -121,7 +121,7 @@ plt.pie(gmv_per_city_dki_q4['gmv'], labels=gmv_per_city_dki_q4['city'], autopct=
 plt.title('GMV Contribution Per City - DKI Jakarta in Q4 2019', loc='center', pad=30, fontsize=15,color='blue')
 plt.show()
 
-#[Membuat Pie Chart]()
+#[Membuat Pie Chart](https://academy.dqlab.id/main/livecode/165/319/1491)
 import matplotlib.pyplot as plt
 gmv_per_city_dki_q4 = dataset_dki_q4.groupby('city')['gmv'].sum().reset_index()
 plt.figure(figsize=(6,6))
@@ -129,7 +129,7 @@ plt.pie(gmv_per_city_dki_q4['gmv'], labels=gmv_per_city_dki_q4['city'], autopct=
 plt.title('GMV Contribution Per City - DKI Jakarta in Q4 2019', loc='center', pad=30, fontsize=15,color='blue')
 plt.show()
 
-#[Membuat Bar Chart]()
+#[Membuat Bar Chart](https://academy.dqlab.id/main/livecode/165/319/1492)
 import matplotlib.pyplot as plt
 plt.clf()
 dataset_dki_q4.groupby('city')['gmv'].sum().sort_values(ascending=False).plot(kind='bar', color='green')
@@ -142,7 +142,7 @@ plt.yticks(labels, (labels/1000000000).astype(int))
 plt.xticks(rotation=0)
 plt.show()
 
-#[Membuat Multi-Bar Chart]()
+#[Membuat Multi-Bar Chart](https://academy.dqlab.id/main/livecode/165/319/1493)
 import matplotlib.pyplot as plt
 dataset_dki_q4.groupby(['city','order_month'])['gmv'].sum().unstack().plot(kind='bar')
 plt.title('GMV Per City, Breakdown by Month\nDKI Jakarta in Q4 2019',loc='center', pad=30, fontsize=15, color='blue')
@@ -156,7 +156,7 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-#[Membuat Stacked Chart]()
+#[Membuat Stacked Chart](https://academy.dqlab.id/main/livecode/165/319/1494)
 import matplotlib.pyplot as plt
 dataset_dki_q4.groupby(['order_month', 'city'])['gmv'].sum().sort_values(ascending=False).unstack().plot(kind='bar', stacked=True)
 plt.title('GMV Per Month, Breakdown by City\nDKI Jakarta in Q4 2019', loc='center', pad=30, fontsize= 15, color='blue')
@@ -170,7 +170,7 @@ plt.xticks(rotation=0)
 plt.tight_layout()
 plt.show()
 
-#[Membuat Agregat Data Customer]()
+#[Membuat Agregat Data Customer](https://academy.dqlab.id/main/livecode/165/320/1496)
 data_per_customer = (dataset_dki_q4.groupby('customer_id')
                                    .agg({'order_id':'nunique', 
                                          'quantity': 'sum', 
@@ -179,7 +179,7 @@ data_per_customer = (dataset_dki_q4.groupby('customer_id')
                                    .rename(columns={'order_id':'orders'}))
 print(data_per_customer.sort_values(by='orders', ascending=False))
 
-#[Membuat Histogram - Part 1]()
+#[Membuat Histogram - Part 1](https://academy.dqlab.id/main/livecode/165/320/1497)
 import matplotlib.pyplot as plt
 plt.clf()
 # Histogram pertama
@@ -194,7 +194,7 @@ plt.xlabel('Number of Orders', fontsize=12)
 plt.ylabel('Number of Customers', fontsize=12)
 plt.show()
 
-#[Membuat Histogram - Part 2]()
+#[Membuat Histogram - Part 2](https://academy.dqlab.id/main/livecode/165/320/1498)
 import matplotlib.pyplot as plt
 plt.figure(figsize=(10,5))
 plt.hist(data_per_customer['quantity'], bins=100, range=(1,200), color='brown')
@@ -204,7 +204,7 @@ plt.ylabel('Number of Customers', fontsize=12)
 plt.xlim(xmin=0, xmax=200)
 plt.show()
 
-#[Membuat Histogram - Part 3]()
+#[Membuat Histogram - Part 3](https://academy.dqlab.id/main/livecode/165/320/1499)
 import matplotlib.pyplot as plt
 plt.figure(figsize=(10,5))
 plt.hist(data_per_customer['gmv'], bins=100, range=(1,200000000), color='green')
@@ -216,7 +216,7 @@ labels, locations=plt.xticks()
 plt.xticks(labels, (labels/1000000).astype(int))
 plt.show()
 
-#[Membuat Scatterplot]()
+#[Membuat Scatterplot](https://academy.dqlab.id/main/livecode/165/320/1502)
 import matplotlib.pyplot as plt
 plt.clf()
 # Scatterplot pertama
@@ -235,7 +235,7 @@ labels, locations=plt.yticks()
 plt.yticks(labels, (labels/1000000).astype(int))
 plt.show()
 
-#[Case 1: Menentukan brand top 5]()
+#[Case 1: Menentukan brand top 5](https://academy.dqlab.id/main/livecode/165/321/1504)
 top_brands = (dataset[dataset['order_month']=='2019-12'].groupby('brand')['quantity']
                 .sum()
                 .reset_index()
@@ -248,7 +248,7 @@ dataset_top5brand_dec = dataset[(dataset['order_month']=='2019-12') & (dataset['
 # print top brands
 print(top_brands)
 
-#[Case 2: Multi-line chart daily quantity untuk brand top 5]()
+#[Case 2: Multi-line chart daily quantity untuk brand top 5](https://academy.dqlab.id/main/livecode/165/321/1505)
 import matplotlib.pyplot as plt
 dataset_top5brand_dec.groupby(['order_date','brand'])['quantity'].sum().unstack().plot(marker='.', cmap='plasma')
 plt.title('Daily Sold Quantity Dec 2019 - Breakdown by Brands',loc='center',pad=30, fontsize=15, color='blue')
@@ -266,7 +266,7 @@ plt.gcf().set_size_inches(10, 5)
 plt.tight_layout()
 plt.show()
 
-#[Case 3: Kuantitas penjualan brand top 5 selama Desember 2019]()
+#[Case 3: Kuantitas penjualan brand top 5 selama Desember 2019](https://academy.dqlab.id/main/livecode/165/321/1506)
 import matplotlib.pyplot as plt
 plt.clf()
 dataset_top5brand_dec.groupby('brand')['product_id'].nunique().sort_values(ascending=False).plot(kind='bar', color='green')
@@ -277,7 +277,7 @@ plt.ylim(ymin=0)
 plt.xticks(rotation=0)
 plt.show()
 
-#[Case 4: Penjulan produk diatas 100 dan dibawah 100 selama Desember 2019]()
+#[Case 4: Penjulan produk diatas 100 dan dibawah 100 selama Desember 2019](https://academy.dqlab.id/main/livecode/165/321/1507)
 import matplotlib.pyplot as plt
 #membuat dataframe baru, untuk agregat jumlah quantity terjual per product
 dataset_top5brand_dec_per_product = dataset_top5brand_dec.groupby(['brand','product_id'])['quantity'].sum().reset_index()
@@ -298,7 +298,7 @@ plt.ylim(ymin=0)
 plt.xticks(rotation=0)
 plt.show()
 
-#[Case 5: Murah atau mahalkah harga produk brand top 5]()
+#[Case 5: Murah atau mahalkah harga produk brand top 5](https://academy.dqlab.id/main/livecode/165/321/1508)
 import matplotlib.pyplot as plt
 plt.figure(figsize=(10,5))
 plt.hist(dataset_top5brand_dec.groupby('product_id')['item_price'].median(), bins=10, stacked=True, range=(1,2000000), color='green')
@@ -308,7 +308,7 @@ plt.ylabel('Number of Products',fontsize = 12)
 plt.xlim(xmin=0,xmax=2000000)
 plt.show()
 
-#[Case 6a: Korelasi quantity vs GMV]()
+#[Case 6a: Korelasi quantity vs GMV](https://academy.dqlab.id/main/livecode/165/321/1509)
 import matplotlib.pyplot as plt
 #agregat per product
 data_per_product_top5brand_dec = dataset_top5brand_dec.groupby('product_id').agg({'quantity': 'sum', 'gmv':'sum', 'item_price':'median'}).reset_index()
@@ -326,7 +326,7 @@ plt.yticks(labels, (labels/1000000).astype(int))
 plt.show()
 
 
-#[Case 6b: Korelasi median harga vs quantity]()
+#[Case 6b: Korelasi median harga vs quantity](https://academy.dqlab.id/main/livecode/165/321/2403)
 import matplotlib.pyplot as plt
 plt.clf()
 #agregat per product
