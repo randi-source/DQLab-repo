@@ -111,7 +111,7 @@ dataset['VisitorType']=LE.fit_transform(dataset['VisitorType'])
 print(LE.classes_)
 print(np.sort(dataset['VisitorType'].unique()))
 
-#[Features & Label]()
+#[Features & Label](https://academy.dqlab.id/main/livecode/169/329/1570)
 # removing the target column Revenue from dataset and assigning to X
 X = dataset.drop(['Revenue'], axis=1)
 # assigning the target column Revenue to y
@@ -120,7 +120,7 @@ y = dataset['Revenue']
 print("Shape of X:", X.shape)
 print("Shape of y:", y.shape)
 
-#[Training dan Test Dataset]()
+#[Training dan Test Dataset](https://academy.dqlab.id/main/livecode/169/329/1571)
 from sklearn.model_selection import train_test_split
 # splitting the X, and y
 X_train, X_test, y_train, y_test= train_test_split(X, y, test_size=0.2, random_state=0)
@@ -130,19 +130,19 @@ print("Shape of y_train :", y_train.shape)
 print("Shape of X_test :", X_test.shape)
 print("Shape of y_test :", y_test.shape)
 
-#[Training Model: Fit]()
+#[Training Model: Fit](https://academy.dqlab.id/main/livecode/169/329/1572)
 from sklearn.tree import DecisionTreeClassifier
 # Call the classifier
 model=DecisionTreeClassifier()
 # Fit the classifier to the training data
 model=model.fit(X_train, y_train)
 
-#[Training Model: Predict]()
+#[Training Model: Predict](https://academy.dqlab.id/main/livecode/169/329/1573)
 # Apply the classifier/model to the test data
 y_pred=model.predict(X_test)
 print(y_pred.shape)
 
-#[Evaluasi Model Performance - Part 2]()
+#[Evaluasi Model Performance - Part 2](https://academy.dqlab.id/main/livecode/169/329/1575)
 from sklearn.metrics import confusion_matrix, classification_report
 
 # evaluating the model
@@ -159,7 +159,7 @@ print('\nClassification report:')
 cr=classification_report(y_test, y_pred)
 print(cr)
 
-#[Pemodelan Permasalahan Klasifikasi dengan Logistic Regression]()
+#[Pemodelan Permasalahan Klasifikasi dengan Logistic Regression](https://academy.dqlab.id/main/livecode/169/330/1580)
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, classification_report
 
@@ -184,7 +184,7 @@ print('\nClassification report')
 cr = classification_report(y_test, y_pred)  
 print(cr)
 
-#[Classification - Decision Tree]()
+#[Tugas Praktek](https://academy.dqlab.id/main/livecode/169/330/1582)
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
@@ -200,7 +200,7 @@ decision_tree = decision_tree.fit(X_train, y_train)
 print('Training Accuracy :', decision_tree.score(X_train, y_train))
 print('Testing Accuracy :', decision_tree.score(X_test, y_test))
 
-#[Regression: Linear Regression - Part 2]()
+#[Tugas Praktek](https://academy.dqlab.id/main/livecode/169/330/1585)
 #load dataset
 import pandas as pd
 housing = pd.read_csv('https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/pythonTutorial/housing_boston.csv')
@@ -233,7 +233,7 @@ reg = reg.fit(X_train, y_train)
 # Apply the regressor/model to the test data  
 y_pred = reg.predict(X_test)
 
-#[Regression Performance Evaluation]()
+#[Tugas Praktek](https://academy.dqlab.id/main/livecode/169/330/1587)
 from sklearn.metrics import mean_squared_error, mean_absolute_error  
 import numpy as np
 import matplotlib.pyplot as plt 
@@ -255,7 +255,7 @@ plt.ylabel('Predicted value')
 plt.title('True value vs predicted value : Linear Regression')
 plt.show()
 
-#[K-Means Clustering]()
+#[Tugas Praktek](https://academy.dqlab.id/main/livecode/169/331/1590)
 #import library
 import pandas as pd  
 from sklearn.cluster import KMeans
@@ -270,7 +270,7 @@ X = dataset[['annual_income','spending_score']]
 cluster_model = KMeans(n_clusters = 5, random_state = 24)  
 labels = cluster_model.fit_predict(X)
 
-#[Inspect & Visualizing the Cluster]()
+#[Tugas Praktek](https://academy.dqlab.id/main/livecode/169/331/1591)
 #import library
 import matplotlib.pyplot as plt
 
@@ -294,7 +294,7 @@ plt.xlabel('Annual Income')
 plt.ylabel('Spending Score')
 plt.show()
 
-#[Measuring Cluster Criteria]()
+#[Tugas Praktek](https://academy.dqlab.id/main/livecode/169/331/1593)
 #import library
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
@@ -319,7 +319,7 @@ plt.xlabel('No.of Clusters')
 plt.ylabel('inertia')
 plt.show()
 
-#[Case Study: Promos for our e-commerce - Part 1]()
+#[Case Study: Promos for our e-commerce - Part 1](https://academy.dqlab.id/main/livecode/169/332/1596)
 #import library 
 import pandas as pd
 
@@ -337,7 +337,7 @@ print(data.describe())
 print("Ukuran dataset:")
 print(data.shape)
 
-#[Case Study: Promos for our e-commerce - Part 2]()
+#[Case Study: Promos for our e-commerce - Part 2](https://academy.dqlab.id/main/livecode/169/332/2466)
 #2. Data eksplorasi dengan dengan mengecek korelasi dari setiap feature menggunakan fungsi corr()
 print("\n[2] Data eksplorasi dengan dengan mengecek korelasi dari setiap feature menggunakan fungsi corr()")
 print(data.corr())
@@ -346,7 +346,7 @@ print(data.corr())
 print("\n[3] Data eksplorasi dengan mengecek distribusi label menggunakan fungsi groupby() dan size()")
 print(data.groupby('Clicked on Ad').size())
 
-#[Case Study: Promos for our e-commerce - Part 3]()
+#[Case Study: Promos for our e-commerce - Part 3](https://academy.dqlab.id/main/livecode/169/332/2465)
 #import library
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -368,11 +368,11 @@ plt.figure()
 sns.pairplot(data)
 plt.show()
 
-#[Case Study: Promos for our e-commerce - Part 4]()
+#[Case Study: Promos for our e-commerce - Part 4](https://academy.dqlab.id/main/livecode/169/332/2467)
 print("\n[5] Cek missing value")
 print(data.isnull().sum().sum())
 
-#[Case Study: Promos for our e-commerce - Part 5]()
+#[Case Study: Promos for our e-commerce - Part 5](https://academy.dqlab.id/main/livecode/169/332/1600)
 #import library
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
@@ -399,7 +399,7 @@ print("Evaluasi Model Performance:")
 print("Training Accuracy :", logreg.score(X_train, y_train))
 print("Testing Accuracy :", logreg.score(X_test, y_test))
 
-#[Case Study: Promos for our e-commerce - Part 6]()
+#[Case Study: Promos for our e-commerce - Part 6](https://academy.dqlab.id/main/livecode/169/332/2468)
 # Import library
 from sklearn.metrics import confusion_matrix, classification_report
 
