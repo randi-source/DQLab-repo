@@ -1,4 +1,4 @@
-#[Append]()
+#[Append](https://academy.dqlab.id/main/livecode/252/442/2208)
 import pandas as pd
 # Buat series of int (s1) dan series of string (s2)
 s1 = pd.Series([1,2,3,4,5,6])
@@ -15,7 +15,7 @@ df2 = pd.DataFrame({'b':[1,2],
 df2_append_df1 = df2.append(df1)
 print("Dataframe - append:\n", df2_append_df1)
 
-#[Concat]()
+#[Concat](https://academy.dqlab.id/main/livecode/252/442/2209)
 import pandas as pd
 # Buat dataframe df1 dan df2
 df1 = pd.DataFrame({'a':[1,2],
@@ -32,7 +32,7 @@ print("Column-wise - concat:\n", col_wise_concat)
 multiindex_concat = pd.concat([df2, df1], axis=0, keys=['df1','df2'])
 print("Multiindex - concat:\n", multiindex_concat)
 
-#[Merge - Part 1]()
+#[Merge - Part 1](https://academy.dqlab.id/main/livecode/252/442/2210)
 import pandas as pd
 # Buat dataframe df1 dan df2
 df1 = pd.DataFrame({
@@ -58,7 +58,7 @@ print('Merge - Inner:\n', merge_df_inner)
 merge_df_outer = pd.merge(left=df2, right=df1, how='outer', left_on='key', right_on='key')
 print('Merge - Outer:\n', merge_df_outer)
 
-#[Merge - Part 2]()
+#[Merge - Part 2](https://academy.dqlab.id/main/livecode/252/442/2211)
 import pandas as pd
 # Buat dataframe df1 dan df2
 df1 = pd.DataFrame({
@@ -77,7 +77,7 @@ print('Dataframe 2:\n', df2)
 df_merge = pd.merge(df1.reset_index(), df2.reset_index())
 print('Merging dataframe:\n', df_merge)
 
-#[Join]()
+#[Join](https://academy.dqlab.id/main/livecode/252/442/2212)
 import pandas as pd
 # Buat dataframe df1 dan df2
 df1 = pd.DataFrame({
@@ -94,7 +94,7 @@ df2 = pd.DataFrame({
 join_df = df1.set_index('key').join(df2.set_index('key'), how='outer')
 print(join_df)
 
-#[Dataset]()
+#[Dataset](https://academy.dqlab.id/main/livecode/252/443/2215)
 import pandas as pd
 # Dataframe
 data = pd.DataFrame({
@@ -107,7 +107,7 @@ data = pd.DataFrame({
 for column in data.columns:
     print('Unique value %s: %s' % (column, data[column].unique()))
 
-#[Pivot]()
+#[Pivot](https://academy.dqlab.id/main/livecode/252/443/2216)
 import pandas as pd
 # Dataframe
 data = pd.DataFrame({
@@ -123,7 +123,7 @@ print('Pivoting with single column measurement:\n', pivot1)
 pivot2 = data.pivot(index='murid', columns='pelajaran')
 print('Pivoting with multiple column measurement:\n', pivot2)
 
-#[Pivot_table]()
+#[Pivot_table](https://academy.dqlab.id/main/livecode/252/443/2217)
 # Dataframe
 data = pd.DataFrame({
   'kelas': 6*['A'] + 6*['B'],
@@ -138,7 +138,7 @@ print('Creating pivot table -- aggfunc mean:\n', pivot_tab_mean)
 pivot_tab_median = data.pivot_table(index='kelas', columns='pelajaran', values='nilai', aggfunc='median')
 print('Creating pivot table -- aggfunc median:\n', pivot_tab_median)
 
-#[Melt - Part 1]()
+#[Melt - Part 1](https://academy.dqlab.id/main/livecode/252/443/2218)
 import pandas as pd
 # Dataframe
 data = pd.DataFrame({
@@ -157,7 +157,7 @@ print('Melting dataframe:\n', data_melt_1)
 data_melt_2 = pd.melt(data_pivot, id_vars='kelas')
 print('Melting dataframe dengan idvars:\n', data_melt_2)
 
-#[Melt - Part 2]()
+#[Melt - Part 2](https://academy.dqlab.id/main/livecode/252/443/2219)
 import pandas as pd
 # Dataframe
 data = pd.DataFrame({
@@ -179,7 +179,7 @@ print('Melting dataframe dengan id_vars dan value_vars:\n', data_melt_3b)
 data_melt_4 = pd.melt(data_pivot, id_vars='kelas', value_vars=['english','math'], var_name='pelajaran', value_name='nilai')
 print('Melting dataframe dengan id_vars, value_vars, var_name. dan value_name:\n', data_melt_4)
 
-#[Stack & Unstack - Part 1]()
+#[Stack & Unstack - Part 1](https://academy.dqlab.id/main/livecode/252/443/2220)
 
 #[]()
 
