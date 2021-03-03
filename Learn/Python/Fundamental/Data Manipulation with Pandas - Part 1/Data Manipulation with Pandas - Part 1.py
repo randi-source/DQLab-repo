@@ -1,8 +1,8 @@
-#[Memanggil Library Pandas]()
+#[Memanggil Library Pandas](https://academy.dqlab.id/main/livecode/178/346/1682)
 import pandas as pd
 import numpy as np
 
-#[DataFrame & Series]()
+#[DataFrame & Series](https://academy.dqlab.id/main/livecode/178/346/1683)
 import pandas as pd
 # Series
 number_list = pd.Series([1,2,3,4,5,6])
@@ -17,7 +17,7 @@ matrix_list = pd.DataFrame(matrix)
 print("DataFrame:")
 print(matrix_list)
 
-#[Atribut DataFrame & Series - Part 1]()
+#[Atribut DataFrame & Series - Part 1](https://academy.dqlab.id/main/livecode/178/346/1684)
 import pandas as pd
 # Series
 number_list = pd.Series([1,2,3,4,5,6])
@@ -42,7 +42,7 @@ print("\n[4] attribute .astype()")
 print("    Konversi number_list ke str:", number_list.astype("str"))
 print("    Konversi matrix_list ke str:", matrix_list.astype("str"))
 
-#[Atribut DataFrame & Series - Part 2]()
+#[Atribut DataFrame & Series - Part 2](https://academy.dqlab.id/main/livecode/178/346/1685)
 import pandas as pd
 # Series
 number_list = pd.Series([1,2,3,4,5,6])
@@ -64,7 +64,7 @@ print(number_list.to_list())
 print("[7] attribute .unique()")
 print(number_list.unique())
 
-#[Atribut DataFrame & Series - Part 3]()
+#[Atribut DataFrame & Series - Part 3](https://academy.dqlab.id/main/livecode/178/346/1686)
 import pandas as pd
 # Series
 number_list = pd.Series([1,2,3,4,5,6])
@@ -89,7 +89,7 @@ print("[11] attribute .iloc")
 print("    iloc[0:1] pada number_list:", number_list.iloc[0:1])
 print("    iloc[0:1] pada matrix_list:", matrix_list.iloc[0:1])	
 
-#[Creating Series & Dataframe from List]()
+#[Creating Series & Dataframe from List](https://academy.dqlab.id/main/livecode/178/346/1688)
 import pandas as pd
 # Creating series from list
 ex_list = ['a',1,3,5,'c','d']
@@ -105,7 +105,7 @@ cols = ['float','char','obj','char']
 ex_df = pd.DataFrame(ex_list_of_list, index=index, columns=cols)
 print(ex_df)
 
-#[Creating Series & Dataframe from Dictionary]()
+#[Creating Series & Dataframe from Dictionary](https://academy.dqlab.id/main/livecode/178/346/1689)
 import pandas as pd
 # Creating series from dictionary
 dict_series = {'1':'a',
@@ -120,7 +120,7 @@ df_series = {'1':['a','b','c'],
 ex_df = pd.DataFrame(df_series)
 print(ex_df)
 
-#[Creating Series & Dataframe from Numpy Array]()
+#[Creating Series & Dataframe from Numpy Array](https://academy.dqlab.id/main/livecode/178/346/1690)
 import pandas as pd
 import numpy as np
 # Creating series from numpy array (1D)
@@ -134,7 +134,7 @@ arr_df = np.array([[1 ,2 ,3 ,5],
 ex_df = pd.DataFrame(arr_df)
 print(ex_df)
 
-#[Read Dataset - CSV dan TSV]()
+#[Read Dataset - CSV dan TSV](https://academy.dqlab.id/main/livecode/178/347/1694)
 import pandas as pd
 # File CSV
 df_csv = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -143,20 +143,20 @@ print(df_csv.head(3)) # Menampilkan 3 data teratas
 df_tsv = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_tsv.tsv", sep='\t')
 print(df_tsv.head(3)) # Menampilkan 3 data teratas
 
-#[Read Dataset - Excel]()
+#[Read Dataset - Excel](https://academy.dqlab.id/main/livecode/178/347/1695)
 import pandas as pd
 # File xlsx dengan data di sheet "test"
 df_excel = pd.read_excel("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_excel.xlsx", sheet_name="test")
 print(df_excel.head(4)) # Menampilkan 4 data teratas
 
-#[Read Dataset - JSON]()
+#[Read Dataset - JSON](https://academy.dqlab.id/main/livecode/178/347/1698)
 import pandas as pd
 #File JSON
 url="https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/covid2019-api-herokuapp-v2.json"
 df_json=pd.read_json(url)
 print(df_json.head(10)) #Menampilkan 10 data teratas
 
-#[Head & Tail]()
+#[Head & Tail](https://academy.dqlab.id/main/livecode/178/347/2143)
 import pandas as pd
 # Baca file sample_csv.csv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -165,7 +165,7 @@ print("Tiga data teratas:\n", df.head(3))
 # Tampilkan 3 data terbawah
 print("Tiga data terbawah:\n", df.tail(3))
 
-#[Indexing - Part 2]()
+#[Indexing - Part 2](https://academy.dqlab.id/main/livecode/178/429/2133)
 import pandas as pd
 # Baca file TSV sample_tsv.tsv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_tsv.tsv", sep="\t")
@@ -174,7 +174,7 @@ print("Index:", df.index)
 # Column dari df
 print("Columns:", df.columns)
 
-#[Indexing - Part 3]()
+#[Indexing - Part 3](https://academy.dqlab.id/main/livecode/178/429/2134)
 import pandas as pd
 # Baca file TSV sample_tsv.tsv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_tsv.tsv", sep="\t")
@@ -184,7 +184,7 @@ df_x = df.set_index(['order_date', 'city', 'customer_id'])
 for name, level in zip(df_x.index.names, df_x.index.levels):
     print(name,':',level)
 
-#[Indexing - Part 4]()
+#[Indexing - Part 4](https://academy.dqlab.id/main/livecode/178/429/2135)
 import pandas as pd
 # Baca file sample_tsv.tsv untuk 10 baris pertama saja
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_tsv.tsv", sep="\t", nrows=10)
@@ -195,14 +195,14 @@ df.index = ["Pesanan ke-" + str(i) for i in range(1, 11)]
 # Cetak data frame dengan index baru
 print("Dataframe dengan index baru:\n", df)
 
-#[Indexing - Part 5]()
+#[Indexing - Part 5](https://academy.dqlab.id/main/livecode/178/429/2138)
 import pandas as pd
 # Baca file sample_tsv.tsv dan set lah index_col sesuai instruksi
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_tsv.tsv", sep="\t", index_col=["order_date", "order_id"])
 # Cetak data frame untuk 8 data teratas
 print("Dataframe:\n", df.head(8))
 
-#[Slicing - Part 1]()
+#[Slicing - Part 1](https://academy.dqlab.id/main/livecode/178/429/2136)
 import pandas as pd
 # Baca file sample_csv.csv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -212,7 +212,7 @@ df_slice = df.loc[(df["customer_id"] == "18055") &
 				 ]
 print("Slice langsung berdasarkan kolom:\n", df_slice)
 
-#[Slicing - Part 2]()
+#[Slicing - Part 2](https://academy.dqlab.id/main/livecode/178/429/2139)
 import pandas as pd
 # Baca file sample_csv.csv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -222,7 +222,7 @@ df = df.set_index(["order_date","order_id","product_id"])
 df_slice = df.loc[("2019-01-01",1612339,["P2154","P2159"]),:]
 print("Slice df:\n", df_slice)
 
-#[Transforming - Part 1]()
+#[Transforming - Part 1](https://academy.dqlab.id/main/livecode/178/429/2142)
 import pandas as pd
 # Baca file sample_csv.csv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -233,7 +233,7 @@ df["order_date"] = pd.to_datetime(df["order_date"])
 # Tampilkan tipe data df setelah transformasi
 print("\nTipe data df setelah transformasi:\n", df.dtypes)
 
-#[Transforming - Part 2]()
+#[Transforming - Part 2](https://academy.dqlab.id/main/livecode/178/429/2144)
 import pandas as pd
 # Baca file sample_csv.csv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -246,7 +246,7 @@ df["city"] = df["city"].astype("category")
 # Tampilkan tipe data df setelah transformasi
 print("\nTipe data df setelah transformasi:\n", df.dtypes)
 
-#[Transforming - Part 3]()
+#[Transforming - Part 3](https://academy.dqlab.id/main/livecode/178/429/2145)
 import pandas as pd
 # Baca file sample_csv.csv
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/sample_csv.csv")
@@ -261,7 +261,7 @@ df["brand"] = df["brand"].map(lambda x: x[-1])
 # Cetak 5 baris teratas kolom brand
 print("Kolom brand setelah map:\n", df["brand"].head())
 
-#[Transforming - Part 4]()
+#[Transforming - Part 4](https://academy.dqlab.id/main/livecode/178/429/2146)
 import numpy as np
 import pandas as pd
 # number generator, set angka seed menjadi suatu angka, bisa semua angka, supaya hasil random nya selalu sama ketika kita run
@@ -279,7 +279,7 @@ def qudratic_fun(x):
 df_tr2 = df_tr.applymap(qudratic_fun)
 print("\nDataframe - cara 2:\n", df_tr2)
 
-#[Inspeksi Missing Value]()
+#[Inspeksi Missing Value](https://academy.dqlab.id/main/livecode/178/430/2148)
 import pandas as pd
 # Baca file "public data covid19 jhu csse eu.csv"
 df=pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/CHAPTER+4+-+missing+value+-+public+data+covid19+.csv")
@@ -289,7 +289,7 @@ print(df.info())
 mv=df.isna().sum()
 print("\nJumlah missing value per kolom:\n", mv)
 
-#[Treatment untuk Missing Value - Part 2]()
+#[Treatment untuk Missing Value - Part 2](https://academy.dqlab.id/main/livecode/178/430/2150)
 Dataset : https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/CHAPTER+4+-+missing+value+-+public+data+covid19+.csv
 import pandas as pd
 # Baca file "public data covid19 jhu csse eu.csv"
@@ -303,7 +303,7 @@ print("Ukuran df setelah buang kolom dengan seluruh data missing: %d baris, %d k
 df = df.dropna(axis=0, how="any")
 print("Ukuran df setelah dibuang baris yang memiliki sekurangnya 1 missing value: %d baris, %d kolom." % df.shape)
 
-#[Treatment untuk Missing Value - Part 3]()
+#[Treatment untuk Missing Value - Part 3](https://academy.dqlab.id/main/livecode/178/430/2152)
 import pandas as pd
 # Baca file "public data covid19 jhu csse eu.csv"
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/CHAPTER+4+-+missing+value+-+public+data+covid19+.csv")
@@ -314,7 +314,7 @@ df["province_state"] = df["province_state"].fillna("unknown_province_state")
 # Cetak kembali unique value pada kolom province_state
 print("Unique value setelah fillna:\n", df["province_state"].unique())
 
-#[Treatment untuk Missing Value - Part 4]()
+#[Treatment untuk Missing Value - Part 4](https://academy.dqlab.id/main/livecode/178/430/2151)
 import pandas as pd
 # Baca file "https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/CHAPTER+4+-+missing+value+-+public+data+covid19+.csv"
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/CHAPTER+4+-+missing+value+-+public+data+covid19+.csv")
@@ -329,7 +329,7 @@ df_mean = df["active"].fillna(df["active"].mean())
 # Cetak nilai mean dan median awal setelah diisi dengan mean
 print("Fillna mean: mean = %f, median = %f." % (df_mean.mean(), df_mean.median()))
 
-#[Treatment untuk Missing Value - Part 5]()
+#[Treatment untuk Missing Value - Part 5](https://academy.dqlab.id/main/livecode/178/430/2155)
 import numpy as np
 import pandas as pd
 # Data
@@ -354,7 +354,7 @@ ts = ts.interpolate()
 # Cetak time series setelah interpolasi linier
 print("Setelah diisi missing valuenya:\n", ts)
 
-#[Project dari Andra]()
+#[Project dari Andra](https://academy.dqlab.id/main/livecode/178/431/2156)
 # 1. Baca dataset
 print("[1] BACA DATASET")
 df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/retail_raw_test.csv", low_memory=False)
