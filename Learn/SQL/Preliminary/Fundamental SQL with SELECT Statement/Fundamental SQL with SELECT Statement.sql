@@ -45,4 +45,8 @@ WHERE
 SELECT * FROM ms_produk WHERE harga>50000;
 
 #[Menggunakan Operand AND](https://academy.dqlab.id/main/livecode/91/216/1114)
-SELECT * FROM ms_produk WHERE nama_produk='Gantungan Kunci DQLab' AND harga<50000;
+SELECT * 
+FROM ms_produk 
+WHERE 
+  nama_produk='Gantungan Kunci DQLab' 
+  AND harga<50000;
