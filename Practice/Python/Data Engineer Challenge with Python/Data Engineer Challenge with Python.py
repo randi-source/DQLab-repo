@@ -49,28 +49,23 @@ df.to_csv('Indonesia_Demography_by_Province.csv', index=False, encoding='utf-8',
 df.head()
 
 #[Function and Regular Expression](https://academy.dqlab.id/main/projectcode/170/333/1598)
-import numpy as np
+#import library yang dibutuhkan
+import re
 
-def sigmoid(x):
-    return 1/ (1 + np.exp(-x))
+#function email_check
+def email_check(input):
+    match = re.search('(?=^((?!-).)*$)(?=[^0-9])((?=^((?!\.\d).)*$)|(?=.*_))',input)
+    if match:
+  	    print('Pass')
+    else:
+  	    print('Not Pass')
 
-training_inputs = np.array([[0,0,1],
-                            [1,1,1],
-                            [1,0,1],
-                            [0,1,1]])
+#Masukkan daftar email ke dalam list
+emails = ['my-name@someemail.com', 'myname@someemail.com','my.name@someemail.com',
+'my.name2019@someemail.com', 'my.name.2019@someemail.com',
+'somename.201903@someemail.com','my_name.201903@someemail.com',
+'201903myname@someemail.com', '201903.myname@someemail.com']
 
-training_outputs = np.array([[0,1,1,0]]).T
-
-np.random.seed(1)
-
-synaptic_weights= 2* np.random.random((3,1)) - 1
-
-print('Random starting synaptic weights: ')
-print(synaptic_weights)
-
-for iteration in range(1):
-    input_layer = training_inputs
-    outputs = sigmoid(np.dot(input_layer, synaptic_weights))
-
-print('Outputs after training: ')
-print(outputs)
+#Looping untuk pengecekan Pass atau Not Pass
+for email in emails :
+	email_check(email)
